@@ -16,15 +16,15 @@
 
 
 void runCodeWithSoftwarePolling(); //comment these out individually for each test
-void runCodeWithInterrupts();
+//void runCodeWithInterrupts();
 
 int main(){
 
     WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
 
-    //runCodeWithSoftwarePolling();
+    runCodeWithSoftwarePolling();
 
-    runCodeWithInterrupts();
+    //runCodeWithInterrupts();
 
     return 0;
 }
