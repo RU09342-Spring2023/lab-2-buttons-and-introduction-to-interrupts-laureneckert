@@ -3,6 +3,7 @@
  *
  *  Created on: Jan 30, 2023
  *      Author: russty
+ *      Lauren Eckert
  */
 
 
@@ -51,11 +52,13 @@ int main(void){
 //timer
 
 //button 2.3 (temp sensor)
-     P2IES &= ~BIT3;                         // P2.3 Low --> High edge
+     P2IES &= ~BIT3;                         // P2.3 Low --> High edge //sensor says there is a person
      P2IE |= BIT3;                           // P2.3 interrupt enabled
 
+                                             //need interrupt for high to low edge //sensor says person left
+
 //button 4.1 (reset)
-     P4IES &= ~BIT1;                         // P4.1 Low --> High edge
+     P4IES &= ~BIT1;                         // P4.1 Low --> High edge //reset button is pressed
      P4IE |= BIT1;                           // P4.1 interrupt enabled
 
 
@@ -69,6 +72,8 @@ while(1)
   switch (state) {
     case ARMED_STATE:
     {
+      //red LED off
+
       // blink green LED every 3 seconds
 
       //if the sensor returns a 1, indicating person is in the room, move into the WARNING_STATE
