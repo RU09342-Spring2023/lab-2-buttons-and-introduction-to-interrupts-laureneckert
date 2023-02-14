@@ -49,7 +49,7 @@ int main(void){
      P6OUT &= ~BIT6;                         //same thing as above but with the other LED (green)
      P6DIR |= BIT6;
 
-//timer
+//timer - how to run a timer interrupt??
 
 //button 2.3 (temp sensor)
      P2IES &= ~BIT3;                         // P2.3 Low --> High edge //sensor says there is a person
