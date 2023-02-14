@@ -50,4 +50,9 @@ while(1)
 ```
 
 ## Submission
-There is a sample file in this folder you will need to import into your Code Composer and work on. You will need to submit that file, documented well, and a README.md file (you can replace this one) with the documentation that tells someone about what the code is, what it does, how it works etc. For an audience for your README, imagine you at the beginning of the lab, looking for code which does, well, this. 
+There is a sample file in this folder you will need to import into your Code Composer and work on. You will need to submit that file, documented well, and a README.md file (you can replace this one) with the documentation that tells someone about what the code is, what it does, how it works etc. For an audience for your README, imagine you at the beginning of the lab, looking for code which does, well, this.
+
+
+## README Submission
+
+The occupancy sensor first initializes all the LEDs and interrupts. The, the code has a switch statement that outlines different states. The states are as follows: Armed, Warning, Alert. The armed state blinks a green LED, and is the default state. The warning state blinks a red LED, and has an if statement to count up to the required warning time period. The alert state makes the red LED continuously on, and can be simulated by holding down the 4.1 button similar to receiving an occupancy sensor's true. It can then can be unarmed by releasing the 4.1 button, which is performed in the code with a for statement. 
